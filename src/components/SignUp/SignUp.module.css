@@ -1,0 +1,85 @@
+:root {
+    --button-color: #28d2d0;
+}
+
+.SignUpComponent {
+    width: 555px;
+    padding: 0px 20px;    
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Gotham SSm A, Gotham SSm B, Halvetica, sans-serif;
+    text-align: center;
+}
+
+.TitleWrapper {
+    padding-bottom: 20px;
+}
+
+.Title {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.Subtitle {
+    font-size: 18;
+    font-weight: 500;
+    line-height: 27px;
+    margin: 0;
+}
+
+.TextInputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.TextInput{
+    width: 42%;
+    border: none;
+    border-radius: 5px;
+    height: 70px;
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+.RadioContainer {
+    border: 1px solid white;
+    padding: 10px 15px 20px 15px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.RadioContainer p {
+    margin: 10px, 0, 0, 25px;
+    margin-left: 25px;
+    font-size: 12px;
+}
+
+.RadioContainer input {
+    margin-right: 10px;
+}
+
+.CheckboxContainer {
+    text-align: left;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.CheckboxContainer input {
+    margin-right: 10px;
+}
+
+.submitBTN{
+    width: 100%;
+    height: 65px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--button-color);
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: 600;
+}
