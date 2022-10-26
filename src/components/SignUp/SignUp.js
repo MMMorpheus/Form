@@ -1,6 +1,7 @@
 import React from 'react';
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import style from './SignUp.module.css'
+import { SIGN_UP_SCHEMA } from '../../utils/validation/schemas';
 
 const initialValues ={
     firstName: '',
@@ -26,7 +27,7 @@ const SignUp = () => {
                 <h2 className={style.Title}>CREATE AN ACCOUNT</h2>
                 <h4 className={style.Subtitle}>We always keep your name and email address private.</h4>
             </div>
-            <Formik initialValues={initialValues} onSubmit={formikSubmit}>
+            <Formik initialValues={initialValues} onSubmit={formikSubmit} validationSchema={SIGN_UP_SCHEMA}>
                 <Form>
                     <div className={style.TextInputContainer}>
                         <Field className={style.TextInput} name='firstName' placeholder='First name' />

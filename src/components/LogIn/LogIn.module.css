@@ -2,16 +2,16 @@
     --button-color: #28d2d0;
 }
 
-.wrapper {
-    width: 50vw;
+.LoginComponent {
+    width: 555px;
+    padding: 0px 20px;
     text-align: center;
     color: white;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 }
 
-.textInput {
+.TextInput {
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -37,3 +37,12 @@
     font-size: 1.2em;
     font-weight: 600;
 }
+
+/* .ErrorMessage {
+    position: absolute;
+    right: 1%;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+} */

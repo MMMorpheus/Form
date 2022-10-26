@@ -1,6 +1,7 @@
 import React from 'react';
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import style from './LogIn.module.css'
+import { LOG_IN_SCHEMA } from '../../utils/validation/schemas';
 
 const initialValues = {
     email: '',
@@ -17,12 +18,13 @@ const LogIn = () => {
     }
 
     return (
-        <article className={style.wrapper}>
-            <h1>LOGIN TO YOUR ACCOUNT</h1>
-            <Formik initialValues={initialValues} onSubmit={formikSubmit}>
+        <article className={style.LoginComponent}>
+            <h2>LOGIN TO YOUR ACCOUNT</h2>
+            <Formik initialValues={initialValues} onSubmit={formikSubmit} validationSchema={LOG_IN_SCHEMA}>
                 <Form>
-                    <Field className={style.textInput} type='email' name='email' placeholder='Email address'/>
-                    <Field className={style.textInput} type='password' name='password' placeholder='Password'/>
+                    <Field className={style.TextInput} type='email' name='email' placeholder='Email address'/>
+                    <ErrorMessage name='email' component="div" className={style.ErrorMessage}/>
+                    <Field className={style.TextInput} type='password' name='password' placeholder='Password'/>
                     <div className={style.miniWrapper}>
                         <label>
                         <Field type='checkbox' name='rememberMeToggle' />
