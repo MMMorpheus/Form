@@ -23,8 +23,8 @@ const LogIn = () => {
             <h2>LOGIN TO YOUR ACCOUNT</h2>
             <Formik initialValues={initialValues} onSubmit={formikSubmit} validationSchema={LOG_IN_SCHEMA}>
                 <Form>
-                    <InputWithError name="email" type="text" placeholder="Email" />
-                    <InputWithError name="password" type="password" placeholder="Password"/>
+                    <InputWithError name="email" type="text" placeholder="Email" errorPos="logInPosition"/>
+                    <InputWithError name="password" type="password" placeholder="Password" errorPos="logInPosition"/>
                     <div className={style.miniWrapper}>
                         <label>
                             <Field type='checkbox' name='rememberMeToggle' />

@@ -2,6 +2,9 @@ import React from 'react';
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import style from './SignUp.module.css'
 import { SIGN_UP_SCHEMA } from '../../utils/validation/schemas';
+import InputWithError from '../Input/InputWithError';
+import SubmitBtn from '../SubmitBtn/SubmitBtn';
+
 
 const initialValues ={
     firstName: '',
@@ -30,30 +33,12 @@ const SignUp = () => {
             <Formik initialValues={initialValues} onSubmit={formikSubmit} validationSchema={SIGN_UP_SCHEMA}>
                 <Form>
                     <div className={style.TextInputContainer}>
-                        <label className={style.ContainerForMessage}>
-                            <Field className={style.TextInput} name='firstName' placeholder='First name' />
-                            <ErrorMessage name='firstName' component="div" className={style.ErrorMessage}/>
-                        </label>
-                        <label className={style.ContainerForMessage}>
-                            <Field className={style.TextInput} name='lastName' placeholder='Last name' />
-                            <ErrorMessage name='lastName' component="div" className={style.ErrorMessage}/>
-                        </label>
-                        <label className={style.ContainerForMessage}>
-                            <Field className={style.TextInput} name='displayName' placeholder='Display name' />
-                            <ErrorMessage name='displayName' component="div" className={style.ErrorMessage}/>
-                        </label>
-                        <label className={style.ContainerForMessage}>
-                            <Field className={style.TextInput} name='email' placeholder='Email Address' />
-                            <ErrorMessage name='email' component="div" className={style.ErrorMessage}/>
-                        </label>
-                        <label className={style.ContainerForMessage}>
-                            <Field className={style.TextInput} name='password' type='password'  placeholder='Password' />
-                            <ErrorMessage name='password' component="div" className={style.ErrorMessage}/>
-                        </label>
-                        <label className={style.ContainerForMessage}>
-                            <Field className={style.TextInput} name='passConfirmation' type='password'  placeholder='Password Confirmation' />
-                            <ErrorMessage name='passConfirmation' component="div" className={style.ErrorMessage}/>
-                        </label>
+                        <InputWithError name="firstName" type="text" placeholder="First name" width="signUp" errorPos="signUpLeft"/>
+                        <InputWithError name="lasttName" type="text" placeholder="Last name" width="signUp" errorPos="signUpRight"/>
+                        <InputWithError name="displayName" type="text" placeholder="Display name" width="signUp" errorPos="signUpLeft"/>
+                        <InputWithError name="email" type="text" placeholder="Email Address" width="signUp" errorPos="signUpRight"/>
+                        <InputWithError name="password" type="text" placeholder="Password" width="signUp" errorPos="signUpLeft"/>
+                        <InputWithError name="passConfirmation" type="text" placeholder="Password Confirmation" width="signUp" errorPos="signUpRight"/>
                     </div>
                     <div className={style.RadioContainer}>                
                         <label>
