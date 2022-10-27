@@ -29,6 +29,8 @@ export const LOG_IN_SCHEMA = yup.object().shape({
             .matches(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/, 'Invalid email adress'),
     password: yup.string()
             .required('Field is required')
-            .min(8, 'It must contain at least 8 characters')
-            .matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/, 'Invalid password'),
+            .min(4, 'It must contain at least 4 characters')
+            
 })
+
+// .matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/, 'Invalid password'),

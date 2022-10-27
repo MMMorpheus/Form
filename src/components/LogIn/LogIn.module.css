@@ -21,6 +21,14 @@
     margin: 20px 0 0 0;
 }
 
+.Invalid {
+    border: 2px solid rgb(238, 141, 141);
+}
+
+.Valid {
+    border: 2px solid  rgb(141, 238, 154);
+}
+
 .miniWrapper{
     display: flex;
     justify-content: space-between;
@@ -38,11 +46,19 @@
     font-weight: 600;
 }
 
-/* .ErrorMessage {
+.ContainerForMessage{
+    position: relative;
+}
+.ErrorMessage {
     position: absolute;
-    right: 1%;
-    width: 100px;
-    height: 50px;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-
-} */
+    left: 102%;
+    bottom: -150%;
+    width: 150px;
+    height: 70px;
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: rgb(238, 141, 141);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
