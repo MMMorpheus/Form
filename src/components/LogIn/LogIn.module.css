@@ -9,56 +9,12 @@
     color: white;
     display: flex;
     flex-direction: column;
-}
-
-.TextInput {
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    height: 70px;
-    padding-left: 25px;
+    justify-content: space-around;
     box-sizing: border-box;
-    margin: 20px 0 0 0;
-}
-
-.Invalid {
-    border: 2px solid rgb(238, 141, 141);
-}
-
-.Valid {
-    border: 2px solid  rgb(141, 238, 154);
 }
 
 .miniWrapper{
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
-}
-
-.submitBTN{
-    width: 100%;
-    height: 65px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--button-color);
-    color: inherit;
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-.ContainerForMessage{
-    position: relative;
-}
-.ErrorMessage {
-    position: absolute;
-    left: 102%;
-    bottom: -150%;
-    width: 150px;
-    height: 70px;
-    border-radius: 5px;
-    border: 1px solid red;
-    background-color: rgb(238, 141, 141);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

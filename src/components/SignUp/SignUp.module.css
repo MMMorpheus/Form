@@ -34,15 +34,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .TextInput{
-    width: 42%;
+    width: 240px;
     border: none;
     border-radius: 5px;
     height: 70px;
     padding-left: 25px;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .RadioContainer {
@@ -82,4 +83,23 @@
     color: inherit;
     font-size: 1.2em;
     font-weight: 600;
+}
+
+.ContainerForMessage{
+    position: relative;
+    padding: 0;
+}
+
+.ErrorMessage {
+    position: absolute;
+    /* left: 102%;
+    bottom: -150%; */
+    width: 150px;
+    height: 70px;
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: rgb(238, 141, 141);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
