@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Outlet, Link } from 'react-router-dom';
 
@@ -15,8 +14,8 @@ function App() {
 
   return (
     <>
-    <header>
-      <button onClick={handler}>{switcher}</button>
+    <header className="header">
+      <button onClick={handler} className="toggle">{switcher}</button>
     </header>
     <main style={{display: 'flex', justifyContent: 'center'}}>
       <Outlet />

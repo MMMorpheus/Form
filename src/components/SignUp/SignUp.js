@@ -34,11 +34,11 @@ const SignUp = () => {
                 <Form>
                     <div className={style.TextInputContainer}>
                         <InputWithError name="firstName" type="text" placeholder="First name" width="signUp" errorPos="signUpLeft"/>
-                        <InputWithError name="lasttName" type="text" placeholder="Last name" width="signUp" errorPos="signUpRight"/>
+                        <InputWithError name="lastName" type="text" placeholder="Last name" width="signUp" errorPos="signUpRight"/>
                         <InputWithError name="displayName" type="text" placeholder="Display name" width="signUp" errorPos="signUpLeft"/>
                         <InputWithError name="email" type="text" placeholder="Email Address" width="signUp" errorPos="signUpRight"/>
-                        <InputWithError name="password" type="text" placeholder="Password" width="signUp" errorPos="signUpLeft"/>
-                        <InputWithError name="passConfirmation" type="text" placeholder="Password Confirmation" width="signUp" errorPos="signUpRight"/>
+                        <InputWithError name="password" type="password" placeholder="Password" width="signUp" errorPos="signUpLeft"/>
+                        <InputWithError name="passConfirmation" type="password" placeholder="Password Confirmation" width="signUp" errorPos="signUpRight"/>
                     </div>
                     <div className={style.RadioContainer}>                
                         <label>
@@ -60,7 +60,7 @@ const SignUp = () => {
                             Allow Squadhelp to send marketing/promotional offers from time to time
                         </label>
                     </div>
-                    <button className={style.submitBTN} type='onSubmit'>Create account</button>
+                    <SubmitBtn type='onSubmit' innerText="SIGN UP"/>
                 </Form>
             </Formik>
             <p>By clicking this button, you agree to our Terms of Service.</p>

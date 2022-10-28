@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     color: white;
-    /* font-family: Gotham SSm A, Gotham SSm B, Halvetica, sans-serif; */
     text-align: center;
 }
 
@@ -72,34 +71,4 @@
 
 .CheckboxContainer input {
     margin-right: 10px;
-}
-
-.submitBTN{
-    width: 100%;
-    height: 65px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--button-color);
-    color: inherit;
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-.ContainerForMessage{
-    position: relative;
-    padding: 0;
-}
-
-.ErrorMessage {
-    position: absolute;
-    /* left: 102%;
-    bottom: -150%; */
-    width: 150px;
-    height: 70px;
-    border-radius: 5px;
-    border: 1px solid red;
-    background-color: rgb(238, 141, 141);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

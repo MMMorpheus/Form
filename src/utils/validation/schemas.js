@@ -6,7 +6,9 @@ export const SIGN_UP_SCHEMA = yup.object().shape({
             .min(2, 'Too short!')
             .max(35, 'Too long'),
     lastName: yup.string()
-            .required('Field is required'),
+            .required('Field is required')
+            .min(2, 'Too short!')
+            .max(35, 'Too long'),
     displayName: yup.string()
             .required('Field is required')
             .matches(/^[a-z0-9_-]{3,15}$/, 'Invalid display name'),
@@ -30,7 +32,7 @@ export const LOG_IN_SCHEMA = yup.object().shape({
     password: yup.string()
             .required('Field is required')
             .min(4, 'It must contain at least 4 characters')
+            .matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/, 'Invalid password'),
             
 })
 
-// .matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/, 'Invalid password'),
